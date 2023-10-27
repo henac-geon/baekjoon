@@ -1,31 +1,21 @@
-#include<iostream>
-#include<string>
+#include <cstdio>
+#include <cstdlib>
 
 using namespace std;
 
-int main(void) {
-	int n, m;
-	cin >> n >> m;
+int main(void)
+{
+	char m[255];
+	int n;
+	scanf("%s %d", &m, &n);
 
-	if (n > 100 || m > 100) return 0;
+	printf("%d\n", strtol(m, NULL, n));
+	/*
+	strtol 함수를 사용하면 진법으로 표기된 문자열을 정수로 변환시켜준다.
+	strtol 함수는 stdlib.h 헤더 파일에 선언되어 있다.
 
-	int A = {}, B = {};
+	strtol(문자열, 끝포인터, 진법); 으로 사용된다.
+	*/
 
-	for (int *i = 0; *i < n; i++) {
-		for (int *j = 0; *j < m; j++) {
-			cin >> A[i][j];
-		}
-	}
-	for (int *i = 0; *i < n; i++) {
-		for (int *j = 0; *j < m; j++) {
-			cin >> B[i][j];
-		}
-	}
-	for (int *i = 0; *i < n; i++) {
-		for (int *j = 0; *j < m; j++) {
-			A[i][j] += B[i][j];
-			cout << A[i][j];
-		}
-	}
 	return 0;
 }

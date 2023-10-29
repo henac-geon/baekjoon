@@ -128,6 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="세탁소 사장님 동.cpp" />
+    <ClCompile Include="중앙 이동%28임시%29.cpp" />
     <ClCompile Include="진법변환2.cpp" />
     <ClCompile Include="진법변환.cpp" />
   </ItemGroup>

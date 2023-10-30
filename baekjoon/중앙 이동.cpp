@@ -1,4 +1,4 @@
-#include<iostream>
+/*#include<iostream>
 #include <cmath>
 
 using namespace std;
@@ -15,7 +15,7 @@ int main(void) {
 	cout << i;
 
 	return 0;
-} 
+} */
 /*
 #include <iostream>
 

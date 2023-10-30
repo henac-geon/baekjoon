@@ -24,7 +24,10 @@
     <ClCompile Include="세탁소 사장님 동.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="중앙 이동%28임시%29.cpp">
+    <ClCompile Include="벌집1.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="중앙이동.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

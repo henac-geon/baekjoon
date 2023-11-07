@@ -1,14 +1,17 @@
-#include <stdio.h>
+#include <iostream>
 
 using namespace std;
 
 int main(void) {
-    int T;
-    scanf("%d", &T);
-    for (int i = 0; i < T; i++) {
-        int a, b;
-        scanf("%d %d", &a, &b);
-        printf("%d\n", a + b);
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+
+    int n, a, b;
+    cin >> n;
+
+    for (int i = 0; i < n; i++) {
+        cin >> a >> b;
+        cout <<a + b << "\n";
     }
     return 0;
 }

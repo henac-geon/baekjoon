@@ -17,7 +17,5 @@ int main(void) {
 
     for (int i = 0; i < size; i++) cout << n[i] << " ";
 
-    delete[] n;
-
     return 0;
 }

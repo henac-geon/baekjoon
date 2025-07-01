@@ -1,38 +1,31 @@
 #include<iostream>
-#include<queue>
+#include<random>
+#include<ctime>
+#include<algorithm>
 
 using namespace std;
 
-struct pos
+struct QuickSort
 {
 	int x, y;
 };
 
-bool operator<(const pos& a, const pos& b) {
-	if (a.x == b.x) {
-		return a.y > b.y;
-	}
-	return a.x > b.x;
-}
-
 int main(void) {
-	int n, x, y;
+	int n;
 	cin >> n;
 
-	priority_queue<pos> arr;
+	vector<QuickSort> arr(n);
 
 	for (int i = 0; i < n; i++) {
-		cin >> x >> y;
-		pos p;
-		p.x = x;
-		p.y = y;
-		arr.push(p);
+		cin >> arr[i].x >> arr[i].y;
 	}
 
-	while (!arr.empty()) {
-		pos p = arr.top();
-		arr.pop();
-		cout << p.x << " " << p.y << "\n";
+	sort(arr.begin(), arr.end(), [](const QuickSort& a, const QuickSort& b) {
+		return a.x < b.x || (a.x == b.x && a.y < b.y);
+		});
+
+	for(int i = 0; i < n; i++) {
+		cout << arr[i].x << " " << arr[i].y << "\n";
 	}
 
 	return 0;

@@ -1,15 +1,37 @@
-#include<iostream>
+#include <iostream>
+#include <unordered_map>
 
-int main(void) {
-	
-	std::cout << "hello world";
-	// int n, result;
-	//cin >> n >> result;
+// #include <bits/stdc++.h> // 이 해더파일 공부하기 
 
-	//int* arry = new int[n];
+using namespace std;
 
-	//for (int i = 0; i < n; i++) cin >> arry[i];
+int main() {
+	int n, m, a;
 
+	cin >> n;
+
+	unordered_map<int, bool> card;
+
+	for (int i = 0; i < n; i++) {
+		cin >> a;
+		card[a] = true;
+	}
+
+	cin >> m;
+	int* check = new int[m];
+
+	for (int i = 0; i < m; i++) {
+		cin >> a;
+		if (card.find(a) != card.end()) {
+			check[i] = 1; // Card exists
+		} else {
+			check[i] = 0; // Card does not exist
+		}
+	}
+
+	for (int i = 0; i < m; i++) {
+		cout << check[i] << " ";
+	}
 
 	return 0;
 }
